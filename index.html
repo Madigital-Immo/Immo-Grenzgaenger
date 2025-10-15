@@ -1,132 +1,83 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grenzgänger: Steuerfrei ins Eigenheim</title>
-<style>
-:root { --primary:#2563eb; --secondary:#0f172a; --card:#1e293b; --text:#f9fafb; }
-body{font-family:system-ui,Arial,sans-serif;margin:0;color:var(--text);background:var(--secondary);}header{position:relative;height:65vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}header::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;z-index:1;opacity:0.6;}header::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.4);z-index:2;}header .hero{position:relative;z-index:3;color:#f9fafb;padding:1rem;max-width:850px;} .hero h1{font-size:clamp(2rem,4vw,3.5rem);margin:0 0 1rem;line-height:1.2;font-weight:700;color:#f9fafb;border-bottom:1px solid rgba(255,255,255,0.3);display:inline-block;padding-bottom:0.3rem;} .hero p{font-size:1.25rem;margin-bottom:2rem;color:#f9fafb;} .btn{background:var(--primary);color:white;padding:.9rem 2.2rem;border:none;border-radius:10px;font-size:1rem;cursor:pointer;text-decoration:none;transition:.3s;display:inline-block;} .btn:hover{background:#3b82f6;}section{padding:4rem 1rem;max-width:1000px;margin:auto;} .features{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));justify-items:center;} .card{background:var(--card);padding:2.5rem;border-radius:12px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.25);color:var(--text);transition:transform .3s;} .card:hover{transform:translateY(-5px);} .card h3{margin-top:1rem;font-size:1.5rem;color:var(--primary);border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.2rem;display:inline-block;} .card p{font-size:1.05rem;line-height:1.6;} .icon{width:50px;height:50px;margin-bottom:1rem;fill:var(--primary);}form{background:var(--card);padding:2rem;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.2);display:grid;gap:1rem;color:var(--text);} .form-group{display:flex;flex-direction:column;} label{font-weight:600;margin-bottom:.4rem;} input,select,textarea{padding:.6rem .8rem;border:1px solid #475569;border-radius:8px;font-size:1rem;background:var(--secondary);color:var(--text);} input[type='number']::-webkit-inner-spin-button{opacity:1;} .privacy{font-size:.8rem;color:#e2e8f0;} footer{background:var(--secondary);color:var(--text);text-align:center;padding:2rem 1rem;} .faq{background:var(--card);margin-top:2rem;padding:2rem;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.2);color:var(--text);} .faq h3{margin-top:0;color:var(--primary);} a{color:#60a5fa;text-decoration:none;} a:hover{text-decoration:underline;}
-.testimonials{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:2rem;} .testimonial-card{background:var(--card);padding:1.5rem;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.2);color:var(--text);} .testimonial-card p{font-style:italic;margin-bottom:1rem;} .testimonial-card span{display:block;font-weight:600;color:var(--primary);}
-</style>
-</head>
-<body>
-<header>
-<div class="hero">
-<h1>Als Grenzgänger mit der richtigen Immobilieninvestition Steuern senken und zeitgleich Vermögen aufbauen</h1>
-<p>Du wohnst in Deutschland, arbeitest in der Schweiz und willst endlich statt Miete zu zahlen eigenes Vermögen aufbauen? Erfahre in einer auf dich bezogenen Beratung, wie du noch dieses Jahr deine erste Immobilie finanzieren kannst.</p>
+<h3>Vermögen aufbauen</h3>
+<p>Nutze dein Einkommen effektiv, um dir langfristig ein Immobilienvermögen aufzubauen – für mehr finanzielle Freiheit.</p>
 </div>
-</header>
-
-
-<section>
-<h2 style="text-align:center;margin-bottom:3rem;">Warum jetzt handeln?</h2>
-<div class="features">
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 20l10-5V9l-10 5-10-5v8l10 5z"/></svg>
-<h3>Steuervorteile nutzen</h3><p>Profitiere als Grenzgänger von steuerlichen Vorteilen in Deutschland und der Schweiz und reduziere deine jährliche Steuerlast deutlich.</p></div>
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24"><path d="M12 2L3 9h3v13h12V9h3L12 2z"/></svg>
-<h3>0 € Eigenkapital</h3><p>Durch dein CH-Gehalt und die richtige Bankstruktur finanzierst du bis zu 110 % – ohne eigenes Geld.</p></div>
-<div class="card">
-<svg class="icon" viewBox="0 0 24 24"><path d="M4 18h2v-3h2v3h2v-5h2v5h2v-8h2v8h2v-11h2v13H4v-2z M3 4h18v2H3V4z"/></svg>
-<h3>Vermögen aufbauen</h3><p>Nutze dein Einkommen effektiv, um dir langfristig ein Immobilienvermögen aufzubauen – für mehr finanzielle Freiheit.</p></div>
 <div class="card">
 <svg class="icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-<h3>Altersvorsorge sichern</h3><p>Sichere dir heute schon Mieteinnahmen für deine Zukunft und schaffe dir eine wertbeständige Altersvorsorge durch Immobilien.</p></div>
-</div>
-</section>
-
-
-<section>
-<h2 style="text-align:center;margin-bottom:2rem;">Erfahrungen anderer Grenzgänger</h2>
-<div class="testimonials">
-<div class="testimonial-card">
-<p>„Ich hätte nie gedacht, dass ich ohne Eigenkapital eine Immobilie kaufen kann. Dank der richtigen Struktur spare ich jedes Jahr über 4.000 € Steuern.“</p>
-<span>– Daniel S., Lörrach</span>
-</div>
-<div class="testimonial-card">
-<p>„Alles lief super professionell ab. Ich arbeite in Basel, wohne in Deutschland – jetzt zahlt meine Immobilie für mich mit!“</p>
-<span>– Sabrina F., Rheinfelden</span>
-</div>
-<div class="testimonial-card">
-<p>„Ich wurde bestens beraten. Keine leeren Versprechen, sondern klare Zahlen und ehrliche Einschätzung. Danke an das Team!“</p>
-<span>– Marco B., Waldshut</span>
-</div>
-<div class="testimonial-card">
-<p>„Als Grenzgänger war ich skeptisch – jetzt habe ich meine erste vermietete Wohnung und spare jedes Jahr Steuern.“</p>
-<span>– Patrick R., Bad Säckingen</span>
+<h3>Altersvorsorge sichern</h3>
+<p>Sichere dir heute schon Mieteinnahmen für deine Zukunft und schaffe dir eine wertbeständige Altersvorsorge durch Immobilien.</p>
 </div>
 </div>
 </section>
 
-  <section id="kontakt" aria-labelledby="qc">
-    <h2 id="qc">Dein Quick-Check</h2>
 
-    <!-- Formspree: Endpoint aus deinem Code beibehalten -->
-    <form id="qcForm" action="https://formspree.io/f/mqabnevl" method="POST" novalidate>
-      <!-- Meta: Betreff + Redirect (optional) -->
-      <input type="hidden" name="_subject" value="Quick-Check Anfrage – MA.DIGITAL" />
-      <!-- Optional: eigene Danke-Seite -->
-      <!-- <input type="hidden" name="_next" value="https://deine-domain.de/danke.html" /> -->
-      <!-- Honeypot (Spam-Schutz) -->
-      <input type="text" name="_hp" id="hp" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+<section class="chance-section">
+<h2>IHRE CHANCE - VORTEIL MIT EINER IMMOBILIE</h2>
+<h3>So helfen wir Grenzgängern, Steuern zu sparen und Vermögen aufzubauen.</h3>
+<div class="chance-grid">
+<div class="chance-item">
+<h4>Steuern senken</h4>
+<p>Zinsen und Abschreibung (AfA) richtig nutzen: Wir zeigen, wie Grenzgänger ihre Steuerlast legal reduzieren – klar, verständlich, transparent.</p>
+</div>
+<div class="chance-item">
+<h4>Kapitalanlage-Immobilie. Alles Geprüft!</h4>
+<p>Kapitalanlage-Objekte in Deutschland, passend zu Einkommen und Zielen. Realistische Kalkulation statt Luftschloss.</p>
+</div>
+<div class="chance-item">
+<h4>Vermögensaufbau</h4>
+<p>Bauen Sie langfristig Eigenkapital auf – mit Immobilien, die sich fast von selbst tragen.</p>
+</div>
+<div class="chance-item">
+<h4>Zukunftssicherheit & Altersvorsorge</h4>
+<p>Mit Immobilieninvestitionen sicherst du dir ein stabiles Fundament für die Zukunft – unabhängig von Rentenentwicklung oder Inflation.</p>
+</div>
+</div>
+<a href="#kontakt" class="btn" style="margin-top:2.5rem;display:inline-block;">Jetzt Chance nutzen</a>
+</section>
 
-      <div class="form-cols">
-        <div class="form-group">
-          <label for="name">Vor- &amp; Nachname*</label>
-          <input type="text" id="name" name="name" required autocomplete="name" />
-        </div>
-        <div class="form-group">
-          <label for="email">E-Mail*</label>
-          <input type="email" id="email" name="email" required autocomplete="email" />
-        </div>
-      </div>
 
-      <div class="form-cols">
-        <div class="form-group">
-          <label for="phone">Telefon*</label>
-          <input type="tel" id="phone" name="phone" required autocomplete="tel"
-                 pattern="^[+0-9() \-]{6,}$" title="Bitte eine gültige Telefonnummer angeben." />
-        </div>
-        <div class="form-group">
-          <label for="salary">Aktueller CHF-Bruttolohn*</label>
-          <input type="number" id="salary" name="salary" min="0" step="100" required inputmode="numeric" />
-        </div>
-      </div>
-
-      <div class="form-cols">
-        <div class="form-group">
-          <label for="equity">Eigenkapital vorhanden?*</label>
-          <select id="equity" name="equity" required>
-            <option value="" disabled selected>Bitte wählen</option>
-            <option>Ja – weniger als 20.000 €</option>
-            <option>Ja – mehr als 20.000 €</option>
-            <option>Nein</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Deine Nachricht (optional)</label>
-          <textarea id="message" name="message" rows="3" placeholder="Optional: Wann bist du erreichbar? Besondere Hinweise?"></textarea>
-        </div>
-      </div>
-
-      <p class="privacy">
-        Hinweis: Die Kontaktaufnahme erfolgt durch einen geprüften Partnerberater – datenschutzkonform &amp; nur im Rahmen deiner Anfrage.
-      </p>
-      <label class="privacy">
-        <input type="checkbox" name="privacy" required>
-        Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner Daten.*
-      </label>
-
-      <button type="submit" class="btn" aria-label="Quick-Check absenden">Quick-Check absenden</button>
-      <p class="privacy">*Erforderliche Felder. Deine Daten werden ausschließlich zur Kontaktaufnahme im Rahmen der Vorselektion verwendet. Widerruf jederzeit per E-Mail an <a href="mailto:info.madigital@t-online.de">info.madigital@t-online.de</a>.</p>
-
-      <div id="form-ok" class="status ok" role="status" aria-live="polite">Danke! Deine Anfrage wurde versendet – wir melden uns bei dir.</div>
-      <div id="form-err" class="status err" role="status" aria-live="polite">Uff, das hat nicht geklappt. Bitte prüfe die Pflichtfelder oder versuche es später erneut.</div>
-    </form>
-  </section>
-
+<section id="kontakt">
+<h2 style="text-align:center;margin-bottom:2rem;">Dein Quick-Check</h2>
+<form action="https://formspree.io/f/mqabnevl" method="POST">
+<div class="form-group">
+<label for="name">Vor- & Nachname*</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">E-Mail*</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="phone">Telefon*</label>
+<input type="tel" id="phone" name="phone" required>
+</div>
+<div class="form-group">
+<label for="salary">Aktueller CHF-Bruttolohn*</label>
+<input type="number" id="salary" name="salary" min="0" step="100" required>
+</div>
+<div class="form-group">
+<label>Eigenkapital vorhanden?*</label>
+<select name="equity" required>
+<option value="" disabled selected>Bitte wählen</option>
+<option>Ja – weniger als 20.000 €</option>
+<option>Ja – mehr als 20.000 €</option>
+<option>Nein</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Deine Nachricht (optional)</label>
+<textarea id="message" name="message" rows="4" placeholder="Optional: Wann bist du telefonisch erreichbar oder weitere Hinweise"></textarea>
+</div>
+<p class="privacy">Hinweis: Die Kontaktaufnahme wird durch einen geprüften Partnerberater erfolgen – selbstverständlich datenschutzkonform & nur im Rahmen deiner Anfrage.</p>
+<div class="form-group">
+<label><input type="checkbox" name="privacy" required> Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> gelesen & akzeptiere die Verarbeitung meiner Daten.*</label>
+</div>
+<button type="submit" class="btn">Quick-Check absenden</button>
+<div id="form-ok" class="status ok" role="status" aria-live="polite">Danke! Deine Anfrage wurde versendet – wir melden uns bei dir.</div>
+<div id="form-err" class="status err" role="status" aria-live="polite">Uff, das hat nicht geklappt. Bitte prüfe die Pflichtfelder oder versuche es später erneut.</div>
+<p class="privacy">*Erforderliche Felder. Deine Daten werden ausschließlich zur Kontaktaufnahme im Rahmen der Vorselektion verwendet.</p>
+</form>
+</section>
   <section id="datenschutz" aria-labelledby="ds">
     <h2 id="ds">Datenschutzerklärung</h2>
     <p><strong>1. Verantwortlicher</strong><br>MA.DIGITAL, Abbergerstr. 11, 79801 Hohentengen, Deutschland<br>E-Mail: info.madigital@t-online.de</p>
