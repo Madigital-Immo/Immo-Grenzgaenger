@@ -18,7 +18,6 @@ body{font-family:system-ui,Arial,sans-serif;margin:0;color:var(--text);backgroun
 </div>
 </header>
 
-
 <section>
 <h2 style="text-align:center;margin-bottom:3rem;">Warum jetzt handeln?</h2>
 <div class="features">
@@ -52,24 +51,155 @@ body{font-family:system-ui,Arial,sans-serif;margin:0;color:var(--text);backgroun
 </div>
 </section>
 
-  <section id="kontakt">
-    <h2 style="text-align:center;margin-bottom:2rem;">Dein Quick-Check</h2>
-    <form action="https://formspree.io/f/mqabnevl" method="POST">
-      <div class="form-group"><label for="name">Vor- & Nachname*</label><input type="text" id="name" name="name" required></div>
-      <div class="form-group"><label for="email">E-Mail*</label><input type="email" id="email" name="email" required></div>
-      <div class="form-group"><label for="phone">Telefon*</label><input type="tel" id="phone" name="phone" required></div>
-      <div class="form-group"><label for="salary">Aktueller CHF-Bruttolohn*</label><input type="number" id="salary" name="salary" min="0" step="100" required></div>
-      <div class="form-group"><label>Eigenkapital vorhanden?*</label><select name="equity" required><option value="" disabled selected>Bitte wählen</option><option>Ja – weniger als 20.000 €</option><option>Ja – mehr als 20.000 €</option><option>Nein</option></select></div>
-      <div class="form-group"><label for="message">Deine Nachricht (optional)</label><textarea id="message" name="message" rows="4" placeholder="Optional: Wann bist du telefonisch erreichbar oder weitere Hinweise"></textarea></div>
-      <p class="privacy">Hinweis: Die Kontaktaufnahme wird durch einen geprüften Partnerberater erfolgen – selbstverständlich datenschutzkonform &amp; nur im Rahmen deiner Anfrage. Bitte habe Verständnis, dass es unter Umständen bis zu max. 48h dauert, bis du kontaktiert wirst.</p>
-      <div class="form-group"><label><input type="checkbox" name="privacy" required> Ich habe die <a href="#datenschutz" target="_blank">Datenschutzerklärung</a> gelesen &amp; akzeptiere die Verarbeitung meiner Daten.*</label></div>
-      <button type="submit" class="btn">Quick-Check absenden</button>
-      <p class="privacy">*Erforderliche Felder. Deine Daten werden ausschließlich zur Kontaktaufnahme im Rahmen des Quick-Checks verarbeitet. Eine Weitergabe erfolgt nur an unseren geprüften Kooperationspartner/Finanzierungsberater zur Bearbeitung deiner Anfrage. Eine Nutzung zu anderen Zwecken oder Weitergabe an Dritte findet nicht statt.</p>
+  <section id="kontakt" aria-labelledby="qc">
+    <h2 id="qc">Dein Quick-Check</h2>
+
+    <!-- Formspree: Endpoint aus deinem Code beibehalten -->
+    <form id="qcForm" action="https://formspree.io/f/mqabnevl" method="POST" novalidate>
+      <!-- Meta: Betreff + Redirect (optional) -->
+      <input type="hidden" name="_subject" value="Quick-Check Anfrage – MA.DIGITAL" />
+      <!-- Optional: eigene Danke-Seite -->
+      <!-- <input type="hidden" name="_next" value="https://deine-domain.de/danke.html" /> -->
+      <!-- Honeypot (Spam-Schutz) -->
+      <input type="text" name="_hp" id="hp" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+
+      <div class="form-cols">
+        <div class="form-group">
+          <label for="name">Vor- &amp; Nachname*</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail*</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="form-cols">
+        <div class="form-group">
+          <label for="phone">Telefon*</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                 pattern="^[+0-9() \-]{6,}$" title="Bitte eine gültige Telefonnummer angeben." />
+        </div>
+        <div class="form-group">
+          <label for="salary">Aktueller CHF-Bruttolohn*</label>
+          <input type="number" id="salary" name="salary" min="0" step="100" required inputmode="numeric" />
+        </div>
+      </div>
+
+      <div class="form-cols">
+        <div class="form-group">
+          <label for="equity">Eigenkapital vorhanden?*</label>
+          <select id="equity" name="equity" required>
+            <option value="" disabled selected>Bitte wählen</option>
+            <option>Ja – weniger als 20.000 €</option>
+            <option>Ja – mehr als 20.000 €</option>
+            <option>Nein</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Deine Nachricht (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Optional: Wann bist du erreichbar? Besondere Hinweise?"></textarea>
+        </div>
+      </div>
+
+      <p class="privacy">
+        Hinweis: Die Kontaktaufnahme erfolgt durch einen geprüften Partnerberater – datenschutzkonform &amp; nur im Rahmen deiner Anfrage.
+      </p>
+      <label class="privacy">
+        <input type="checkbox" name="privacy" required>
+        Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner Daten.*
+      </label>
+
+      <button type="submit" class="btn" aria-label="Quick-Check absenden">Quick-Check absenden</button>
+      <p class="privacy">*Erforderliche Felder. Deine Daten werden ausschließlich zur Kontaktaufnahme im Rahmen der Vorselektion verwendet. Widerruf jederzeit per E-Mail an <a href="mailto:info.madigital@t-online.de">info.madigital@t-online.de</a>.</p>
+
+      <div id="form-ok" class="status ok" role="status" aria-live="polite">Danke! Deine Anfrage wurde versendet – wir melden uns bei dir.</div>
+      <div id="form-err" class="status err" role="status" aria-live="polite">Uff, das hat nicht geklappt. Bitte prüfe die Pflichtfelder oder versuche es später erneut.</div>
     </form>
   </section>
 
+  <section id="datenschutz" aria-labelledby="ds">
+    <h2 id="ds">Datenschutzerklärung</h2>
+    <p><strong>1. Verantwortlicher</strong><br>MA.DIGITAL, Abbergerstr. 11, 79801 Hohentengen, Deutschland<br>E-Mail: info.madigital@t-online.de</p>
+    <p><strong>2. Erhobene Daten</strong><br>Wir verarbeiten die Angaben aus dem Quick-Check-Formular (Name, E-Mail, Telefonnummer, CHF-Bruttolohn, Eigenkapital, Nachricht) sowie technisch erforderliche Log-Daten (IP-Adresse, Zeitpunkt, User-Agent).</p>
+    <p><strong>3. Zwecke &amp; Rechtsgrundlagen</strong><br>• Durchführung vorvertraglicher Maßnahmen und Beantwortung deiner Anfrage (Art. 6 Abs. 1 lit. b DSGVO).<br>• Gesetzliche Aufbewahrungspflichten (Art. 6 Abs. 1 lit. c DSGVO).<br>• Berechtigtes Interesse an Betrieb, Sicherheit &amp; Optimierung der Website (Art. 6 Abs. 1 lit. f DSGVO).</p>
+    <p><strong>4. Empfänger &amp; Datenübermittlung</strong><br>• Weitergabe an einen externen Kooperationspartner/Finanzierungsberater (Auftragsverarbeitung gem. Art. 28 DSGVO). MA.DIGITAL erhält ggf. eine Erfolgsprovision. Keine eigenständige Beratung/Verkauf durch MA.DIGITAL.<br>• <em>Formspree Inc.</em> (USA) als Auftragsverarbeiter für den Formularversand (Standard-Vertragsklauseln, Art. 46 DSGVO).<br>• <em>Netlify Inc.</em> (USA) – Hosting der statischen Landingpage (Standard-Vertragsklauseln).</p>
+    <p><strong>5. Speicherdauer</strong><br>Löschung, sobald der Zweck entfällt / Fristen ablaufen (i. d. R. 6 Monate nach finaler Bearbeitung).</p>
+    <p><strong>6. Betroffenenrechte</strong><br>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch. Kontakt: <strong>info.madigital@t-online.de</strong>. Beschwerderecht bei einer Aufsichtsbehörde.</p>
+    <p><strong>7. Sicherheit</strong><br>TLS-verschlüsselte Übertragung und angemessene TOMs.</p>
+  </section>
 
-© 2025 MA.DIGITAL | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html
+  <section id="impressum" aria-labelledby="imp">
+    <h2 id="imp">Impressum</h2>
+    <p><strong>Angaben gemäß § 5 TMG</strong></p>
+    <p>MA.DIGITAL<br>Abbergerstr. 11<br>79801 Hohentengen<br>Deutschland</p>
+    <p><strong>Kontakt</strong><br>E-Mail: <a href="mailto:info.madigital@t-online.de">info.madigital@t-online.de</a></p>
+    <p><strong>Vertreten durch</strong><br>Maximilian Aulfinger (Inhaber)</p>
+    <p><strong>Umsatzsteuer-ID</strong><br>Kleinunternehmer gem. § 19 Abs. 1 UStG (keine USt-Ausweisung)</p>
+    <p><strong>Gewerbeanmeldung</strong><br>Zuständige Behörde: Landratsamt Waldshut – Gewerbeamt</p>
+    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong><br>MA.DIGITAL, Anschrift wie oben</p>
+    <p><strong>Online-Streitbeilegung</strong><br>Plattform der EU-Kommission: <a href="https://ec.europa.eu/consumers/odr" rel="noopener">ec.europa.eu/consumers/odr</a>.<br>Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    <p><strong>Transparenz:</strong><br>MA.DIGITAL tritt als Tippgeber auf und erhält für erfolgreiche Vermittlungen eine Erfolgsprovision vom Partnerunternehmen.</p>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="yr"></span> MA.DIGITAL</p>
+    <p><a href="#datenschutz">Datenschutz</a> | <a href="#impressum">Impressum</a></p>
   </footer>
+
+  <script>
+    // Jahr
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Formspree: clientseitiger Submit mit Feedback
+    const form = document.getElementById('qcForm');
+    const ok = document.getElementById('form-ok');
+    const err = document.getElementById('form-err');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.style.display = 'none';
+      err.style.display = 'none';
+
+      // einfache Pflichtfeld-Prüfung
+      const required = ['name','email','phone','salary','equity','privacy'];
+      for (const id of required) {
+        const el = form.querySelector('[name="'+id+'"]') || document.getElementById(id);
+        if (!el) continue;
+        if ((el.type === 'checkbox' && !el.checked) || (el.value || '').trim() === '') {
+          err.textContent = 'Bitte fülle alle Pflichtfelder korrekt aus.';
+          err.style.display = 'block';
+          el.focus();
+          return;
+        }
+      }
+
+      // Honeypot
+      if ((form.querySelector('#hp')?.value || '').trim() !== '') {
+        // Bot — tue so, als ob es klappte
+        ok.style.display = 'block';
+        form.reset();
+        return;
+      }
+
+      const formData = new FormData(form);
+      try {
+        const rsp = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' }});
+        if (rsp.ok) {
+          ok.style.display = 'block';
+          form.reset();
+          // optional: scroll to message
+          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          const data = await rsp.json().catch(()=>({}));
+          err.textContent = (data && data.errors && data.errors[0]?.message) || 'Senden fehlgeschlagen. Bitte später erneut versuchen.';
+          err.style.display = 'block';
+        }
+      } catch (e2) {
+        err.textContent = 'Netzwerkfehler. Prüfe deine Internetverbindung.';
+        err.style.display = 'block';
+      }
+    });
+  </script>
 </body>
 </html>
