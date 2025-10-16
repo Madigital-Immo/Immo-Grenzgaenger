@@ -87,6 +87,39 @@
   height: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+    /* ==== Datenschutz & Impressum kompakter ==== */
+#datenschutz,
+#impressum {
+  font-size: 0.9rem;      /* Text kleiner */
+  line-height: 1.5;       /* angenehme Lesbarkeit */
+}
+
+#datenschutz h2,
+#impressum h2 {
+  font-size: 1.2rem;      /* Überschrift dezent kleiner */
+  margin-bottom: 0.75rem;
+}
+
+/* Links in den Rechtstexten etwas dezenter (optional) */
+#datenschutz a,
+#impressum a {
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+/* Auf sehr kleinen Screens noch eine Spur kleiner (optional) */
+@media (max-width: 480px) {
+  #datenschutz,
+  #impressum {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+  #datenschutz h2,
+  #impressum h2 {
+    font-size: 1.1rem;
+  }
+}
+
   </style>
 </head>
 <body>
