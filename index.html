@@ -70,10 +70,39 @@
       .faq-item{max-width:700px;margin:0 auto 2rem;text-align:center;}
       .faq{margin-bottom:3rem;}
     }
+    /* ==== LOGO Styling ==== */
+.header-logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 90px;
+  height: auto;
+  border-radius: 10px;
+  z-index: 5;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.header-logo:hover {
+  opacity: 1;
+}
+
+.footer-logo {
+  display: block;
+  margin: 1rem auto 0;
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.footer-logo:hover {
+  opacity: 1;
+}
   </style>
 </head>
 <body>
   <header>
+    <img src="./maximilian_aulfinger.jpg" alt="MA.DIGITAL Logo" class="header-logo" loading="lazy">
     <div class="hero">
       <h1>Als Grenzgänger mit der richtigen Immobilienstrategie Steuern senken und zeitgleich Vermögen aufbauen</h1>
       <p>Du wohnst in Deutschland, arbeitest in der Schweiz und willst endlich statt Miete zu zahlen eigenes Vermögen aufbauen? Erfahre in einer auf dich bezogenen Beratung, wie du noch dieses Jahr deine erste Immobilie finanzieren kannst.</p>
@@ -208,10 +237,14 @@
     <div class="faq-item"><h3>Was passiert, wenn ich später nicht mehr Grenzgänger bin?</h3><p>Kein Problem. Deine Immobilie bleibt dein Eigentum und läuft weiter wie gewohnt. Bei Veränderungen (z. B. Jobwechsel oder Rückzug nach Deutschland) kann die Finanzierung angepasst werden – so bleibst du flexibel und gut aufgestellt für die Zukunft.</p></div>
   </section>
 
-  <footer>
-    <p>&copy; <span id="yr"></span> MA.DIGITAL</p>
-    <p><a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
-  </footer>
+<footer>
+  <img src="./maximilian_aulfinger.jpg" alt="MA.DIGITAL Footer Logo" class="footer-logo" loading="lazy">
+  <p>&copy; <span id="yr"></span> MA.DIGITAL</p>
+  <p>
+    <a href="datenschutz.html">Datenschutz</a> |
+    <a href="impressum.html">Impressum</a>
+  </p>
+</footer>
 
   <script>
     // Jahr automatisch setzen (nur wenn Element existiert)
