@@ -43,217 +43,43 @@
     .faq h3{margin-top:0;color:var(--primary);}
     a{color:#60a5fa;text-decoration:none;}
     a:hover{text-decoration:underline;}
-  
-.about-section {
-  background: var(--card);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  margin-top: 3rem;
-}
 
-.about-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
+    .about-section{background:var(--card);padding:3rem 2rem;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.25);margin-top:3rem;}
+    .about-card{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+    .about-section-content{flex:1;min-width:280px;text-align:left;}
+    .about-section-content h2{color:var(--primary);font-size:1.6rem;font-weight:700;margin-bottom:1rem;text-transform:uppercase;}
+    .about-section-content p{font-size:1.1rem;line-height:1.7;max-width:700px;color:var(--text);}
+    .about-section img{border-radius:12px;width:250px;height:auto;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
 
-.about-section-content {
-  flex: 1;
-  min-width: 280px;
-  text-align: left;
-}
+    #datenschutz,#impressum{font-size:0.9rem;line-height:1.5;}
+    #datenschutz h2,#impressum h2{font-size:1.2rem;margin-bottom:0.75rem;}
+    #datenschutz a,#impressum a{font-size:0.9rem;text-decoration:underline;}
+    @media (max-width:480px){#datenschutz,#impressum{font-size:0.85rem;line-height:1.45;}#datenschutz h2,#impressum h2{font-size:1.1rem;}}
 
-.about-section-content h2 {
-  color: var(--primary);
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
-.about-section-content p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  max-width: 700px;
-  color: var(--text);
-}
-
-.about-section img {
-  border-radius: 12px;
-  width: 250px;
-  height: auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-    /* ==== Datenschutz & Impressum kompakter ==== */
-#datenschutz,
-#impressum {
-  font-size: 0.9rem;      /* Text kleiner */
-  line-height: 1.5;       /* angenehme Lesbarkeit */
-}
-
-#datenschutz h2,
-#impressum h2 {
-  font-size: 1.2rem;      /* Überschrift dezent kleiner */
-  margin-bottom: 0.75rem;
-}
-
-/* Links in den Rechtstexten etwas dezenter (optional) */
-#datenschutz a,
-#impressum a {
-  font-size: 0.9rem;
-  text-decoration: underline;
-}
-
-/* Auf sehr kleinen Screens noch eine Spur kleiner (optional) */
-@media (max-width: 480px) {
-  #datenschutz,
-  #impressum {
-    font-size: 0.85rem;
-    line-height: 1.45;
-  }
-  #datenschutz h2,
-  #impressum h2 {
-    font-size: 1.1rem;
-  }
-}
-.steps-section {
-  background: var(--card);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-  margin-top: 4rem;
-  text-align: center;
-}
-.steps-section h2 {
-  color: var(--primary);
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-.steps-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  text-align: left;
-}
-.step {
-  background: rgba(255,255,255,0.05);
-  padding: 1.8rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-}
-.step-number {
-  font-size: 1.8rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.step h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-.step p {
-  line-height: 1.6;
-}
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-section-content {
-    text-align: center;
-  }
-
-  .about-section img {
-    margin: 1.5rem auto 0;
-    display: block;
-  }
-}
-@media (max-width: 768px) {
-  .steps-section {
-    text-align: center;
-  }
-
-  .steps-grid {
-    text-align: center;
-  }
-
-  .step {
-    align-items: center;
-  }
-
-  .step p {
-    text-align: center;
-  }
-}
-@media (max-width: 768px) {
-  .faq {
-    text-align: center;
-  }
-
-  .faq h3 {
-    text-align: center;
-  }
-
-  .faq p {
-    text-align: center;
-  }
-}
-/* Zentrierung für 'In 4 Schritten' */
-.steps-section {
-  text-align: center;
-}
-
-.steps-grid {
-  justify-items: center;
-  text-align: center;
-}
-
-.step {
-  text-align: center;
-  max-width: 400px;
-}
-
-/* Zentrierung für FAQ */
-.faq {
-  text-align: center;
-}
-
-.faq-item {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-.faq h3 {
-  color: #93c5fd;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.faq p {
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* Bonus: Etwas mehr Luft zwischen FAQ und Footer */
-.faq {
-  margin-bottom: 3rem;
-}
-
+    .steps-section{background:var(--card);padding:3rem 2rem;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.25);margin-top:4rem;text-align:center;}
+    .steps-section h2{color:var(--primary);font-size:1.8rem;margin-bottom:2rem;}
+    .steps-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));text-align:left;justify-items:center;}
+    .step{background:rgba(255,255,255,0.05);padding:1.8rem;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.25);text-align:center;max-width:400px;}
+    .step-number{font-size:1.8rem;display:block;margin-bottom:0.5rem;}
+    .step h3{color:var(--primary);margin-bottom:0.5rem;}
+    .step p{line-height:1.6;}
+    @media (max-width:768px){.about-section{flex-direction:column;text-align:center;}
+      .about-section-content{text-align:center;}
+      .about-section img{margin:1.5rem auto 0;display:block;}
+      .steps-section,.steps-grid,.step p,.faq,.faq h3,.faq p{text-align:center;}
+      .faq-item{max-width:700px;margin:0 auto 2rem;text-align:center;}
+      .faq{margin-bottom:3rem;}
+    }
   </style>
 </head>
 <body>
   <header>
-<div class="hero">
-  <h1>Als Grenzgänger mit der richtigen Immobilienstrategie Steuern senken und zeitgleich Vermögen aufbauen</h1>
-  <p>Du wohnst in Deutschland, arbeitest in der Schweiz und willst endlich statt Miete zu zahlen eigenes Vermögen aufbauen? Erfahre in einer auf dich bezogenen Beratung, wie du noch dieses Jahr deine erste Immobilie finanzieren kannst.</p>
-  <a href="#kontakt" class="btn">Jetzt Chance nutzen</a>
-</div>
-</header>
-
+    <div class="hero">
+      <h1>Als Grenzgänger mit der richtigen Immobilienstrategie Steuern senken und zeitgleich Vermögen aufbauen</h1>
+      <p>Du wohnst in Deutschland, arbeitest in der Schweiz und willst endlich statt Miete zu zahlen eigenes Vermögen aufbauen? Erfahre in einer auf dich bezogenen Beratung, wie du noch dieses Jahr deine erste Immobilie finanzieren kannst.</p>
+      <a href="#kontakt" class="btn">Jetzt Chance nutzen</a>
+    </div>
+  </header>
 
   <section>
     <h2 style="text-align:center;margin-bottom:3rem;">Warum jetzt handeln?</h2>
@@ -305,25 +131,22 @@
     <a href="#kontakt" class="btn" style="margin-top:2.5rem;display:inline-block;">Jetzt Chance nutzen</a>
   </section>
 
-<section class="about-section">
-  <div class="about-card">
-    <div class="about-section-content">
-      <h2>Über mich – Maximilian Aulfinger</h2>
-      <p>
-        Ich bin 37 Jahre alt, Vater von zwei Kindern und war selbst viele Jahre als Grenzgänger in der Schweiz tätig.
-        Heute bin ich Immobilienbesitzer und kenne die Vorteile, die eine clevere Immobilienstrategie Grenzgängern bietet – besonders wenn es darum geht, Steuern zu sparen und langfristig Vermögen aufzubauen.
-        Jeder Grenzgänger sollte die Möglichkeit nutzen, diese Vorteile für sich einzusetzen – um nicht nur heute mehr Netto vom Brutto zu haben, sondern auch für die Zukunft finanziell stark aufgestellt zu sein.
-      </p>
+  <section class="about-section">
+    <div class="about-card">
+      <div class="about-section-content">
+        <h2>Über mich – Maximilian Aulfinger</h2>
+        <p>Ich bin 37 Jahre alt, Vater von zwei Kindern und war selbst viele Jahre als Grenzgänger in der Schweiz tätig. Heute bin ich Immobilienbesitzer und kenne die Vorteile, die eine clevere Immobilienstrategie Grenzgängern bietet – besonders wenn es darum geht, Steuern zu sparen und langfristig Vermögen aufzubauen. Jeder Grenzgänger sollte die Möglichkeit nutzen, diese Vorteile für sich einzusetzen – um nicht nur heute mehr Netto vom Brutto zu haben, sondern auch für die Zukunft finanziell stark aufgestellt zu sein.</p>
+      </div>
+      <!-- Bild aus dem Repo-Root -->
+      <img src="./maximilian_aulfinger.jpg" alt="Maximilian Aulfinger" loading="lazy" decoding="async" width="250" height="250">
     </div>
-    <img src="https://raw.githubusercontent.com/Madigital-Immo/Immo-Grenzgaenger/main/maximilian-aulfinger.jpg"
-     alt="Maximilian Aulfinger"
-     loading="lazy" width="250" height="250">
-  </div>
-</section>
-  
+  </section>
+
   <section id="kontakt">
     <h2 style="text-align:center;margin-bottom:2rem;">Dein Quick-Check</h2>
-    <form action="https://formspree.io/f/mqabnevl" method="POST">
+    <form id="qcForm" action="https://formspree.io/f/mqabnevl" method="POST">
+      <!-- Honeypot -->
+      <input id="hp" name="hp" type="text" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
       <div class="form-group">
         <label for="name">Vor- & Nachname*</label>
         <input type="text" id="name" name="name" required>
@@ -360,141 +183,90 @@
       <button type="submit" class="btn">Quick-Check absenden</button>
       <div id="form-ok" class="status ok" role="status" aria-live="polite">Danke! Deine Anfrage wurde versendet – wir melden uns bei dir.</div>
       <div id="form-err" class="status err" role="status" aria-live="polite">Uff, das hat nicht geklappt. Bitte prüfe die Pflichtfelder oder versuche es später erneut.</div>
-      <p class="privacy">*Erforderliche Felder. Deine Daten werden ausschließlich zur Kontaktaufnahme im Rahmen der Vorselektion verwendet und im Anschluss an einen geprüften Kooperationspartner zur individuellen Beratung weitergegeben. Eine sonstige Weitergabe an Dritte erfolgt nicht. Du kannst deine Einwilligung jederzeit per E-Mail an info.madigital@t-online.de
- widerrufen.</p>
+      <p class="privacy">*Erforderliche Felder. Deine Daten werden ausschließlich zur Kontaktaufnahme im Rahmen der Vorselektion verwendet und im Anschluss an einen geprüften Kooperationspartner zur individuellen Beratung weitergegeben. Eine sonstige Weitergabe an Dritte erfolgt nicht. Du kannst deine Einwilligung jederzeit per E-Mail an info.madigital@t-online.de widerrufen.</p>
     </form>
   </section>
 
-</body>
-</html>
-<section class="steps-section">
-  <h2>In 4 Schritten zu deiner steueroptimierten Immobilie</h2>
-
-  <div class="steps-grid">
-    <div class="step">
-      <span class="step-number">1️⃣</span>
-      <h3>Quick-Check ausfüllen</h3>
-      <p>Fülle den kostenlosen Quick-Check aus und erhalte eine erste Einschätzung, ob und wie du als Grenzgänger von einer Immobilienstrategie profitieren kannst.</p>
+  <section class="steps-section">
+    <h2>In 4 Schritten zu deiner steueroptimierten Immobilie</h2>
+    <div class="steps-grid">
+      <div class="step"><span class="step-number">1️⃣</span><h3>Quick-Check ausfüllen</h3><p>Fülle den kostenlosen Quick-Check aus und erhalte eine erste Einschätzung, ob und wie du als Grenzgänger von einer Immobilienstrategie profitieren kannst.</p></div>
+      <div class="step"><span class="step-number">2️⃣</span><h3>Erstgespräch vereinbaren</h3><p>Im persönlichen Erstgespräch wird deine aktuelle Situation besprochen – Einkommen, Steuerlast, Ziele & Möglichkeiten. Du erhältst eine ehrliche Einschätzung und Antworten auf deine wichtigsten Fragen.</p></div>
+      <div class="step"><span class="step-number">3️⃣</span><h3>Individuelle Strategie erstellen</h3><p>Gemeinsam mit unseren Partnern wird deine persönliche Immobilienstrategie entwickelt – abgestimmt auf Einkommen, steuerliche Situation und Zukunftsziele. So weißt du genau, wie du optimal vorgehst.</p></div>
+      <div class="step"><span class="step-number">4️⃣</span><h3>Umsetzung & Immobilienkauf</h3><p>Von der Finanzierung über den Kauf bis zur langfristigen Betreuung: Du wirst Schritt für Schritt begleitet – damit dein Einstieg in die steueroptimierte Immobilie reibungslos und sicher gelingt.</p></div>
     </div>
+    <a href="#kontakt" class="btn" style="margin-top:2.5rem;display:inline-block;">Jetzt Quick-Check starten</a>
+  </section>
 
-    <div class="step">
-      <span class="step-number">2️⃣</span>
-      <h3>Erstgespräch vereinbaren</h3>
-      <p>Im persönlichen Erstgespräch wird deine aktuelle Situation besprochen – Einkommen, Steuerlast, Ziele & Möglichkeiten. Du erhältst eine ehrliche Einschätzung und Antworten auf deine wichtigsten Fragen.</p>
-    </div>
+  <section class="faq">
+    <h2>Häufige Fragen (FAQ)</h2>
+    <div class="faq-item"><h3>Kann ich wirklich ohne Eigenkapital starten?</h3><p>Ja, das ist möglich. Viele Grenzgänger können aufgrund ihres Schweizer Gehalts bis zu 110 % des Kaufpreises finanzieren – also auch Nebenkosten. Entscheidend ist, dass deine Bonität passt und du ein solides Finanzierungskonzept wählst. Genau das wird im Quick-Check und im Erstgespräch final geprüft.</p></div>
+    <div class="faq-item"><h3>Wie spare ich als Grenzgänger konkret Steuern?</h3><p>Durch eine clevere Struktur. Abschreibung (AfA), Zinskosten und weitere Aufwendungen kannst du in Deutschland steuerlich geltend machen. Viele unserer Partnerkunden reduzieren so ihre Steuerlast jedes Jahr um mehrere Tausend Euro – und bauen parallel Vermögen auf.</p></div>
+    <div class="faq-item"><h3>Ich arbeite erst seit kurzem in der Schweiz – geht das trotzdem?</h3><p>In vielen Fällen ja. Auch mit kurzer Beschäftigungsdauer kannst du eine Finanzierung bekommen, wenn dein Einkommen und dein Arbeitsvertrag passen. Unsere Partnerbanken prüfen das individuell – du bekommst im Quick-Check sofort Klarheit, ob und wie es geht.</p></div>
+    <div class="faq-item"><h3>Welche Immobilien eignen sich für Grenzgänger?</h3><p>Nur geprüfte Kapitalanlage-Immobilien in Deutschland. Das sind Objekte, die sich durch Mieteinnahmen, Lage und steuerliche Vorteile langfristig tragen. Kein Risiko-Neubau in der Großstadt, sondern stabile, nachhaltig rentable Immobilien.</p></div>
+    <div class="faq-item"><h3>Was kostet mich die Beratung oder Vermittlung?</h3><p>Die erste Beratung ist kostenlos und unverbindlich. Alles weitere wird besprochen, wenn es für dich passt. MA.DIGITAL tritt als Tippgeber auf – die eigentliche Beratung und Finanzierung erfolgt über geprüfte Partner, die eine Erfolgsprovision an MA.DIGITAL zahlen.</p></div>
+    <div class="faq-item"><h3>Was passiert, wenn ich später nicht mehr Grenzgänger bin?</h3><p>Kein Problem. Deine Immobilie bleibt dein Eigentum und läuft weiter wie gewohnt. Bei Veränderungen (z. B. Jobwechsel oder Rückzug nach Deutschland) kann die Finanzierung angepasst werden – so bleibst du flexibel und gut aufgestellt für die Zukunft.</p></div>
+  </section>
 
-    <div class="step">
-      <span class="step-number">3️⃣</span>
-      <h3>Individuelle Strategie erstellen</h3>
-      <p>Gemeinsam mit unseren Partnern wird deine persönliche Immobilienstrategie entwickelt – abgestimmt auf Einkommen, steuerliche Situation und Zukunftsziele. So weißt du genau, wie du optimal vorgehst.</p>
-    </div>
-
-    <div class="step">
-      <span class="step-number">4️⃣</span>
-      <h3>Umsetzung & Immobilienkauf</h3>
-      <p>Von der Finanzierung über den Kauf bis zur langfristigen Betreuung: Du wirst Schritt für Schritt begleitet – damit dein Einstieg in die steueroptimierte Immobilie reibungslos und sicher gelingt.</p>
-    </div>
-  </div>
-
-  <a href="#kontakt" class="btn" style="margin-top:2.5rem;display:inline-block;">Jetzt Quick-Check starten</a>
-</section>
-
-
-<section class="faq">
-  <h2>Häufige Fragen (FAQ)</h2>
-
-  <div class="faq-item">
-    <h3>Kann ich wirklich ohne Eigenkapital starten?</h3>
-    <p>Ja, das ist möglich. Viele Grenzgänger können aufgrund ihres Schweizer Gehalts bis zu 110 % des Kaufpreises finanzieren – also auch Nebenkosten. Entscheidend ist, dass deine Bonität passt und du ein solides Finanzierungskonzept wählst. Genau das wird im Quick-Check und im Erstgespräch final geprüft.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Wie spare ich als Grenzgänger konkret Steuern?</h3>
-    <p>Durch eine clevere Struktur. Abschreibung (AfA), Zinskosten und weitere Aufwendungen kannst du in Deutschland steuerlich geltend machen. Viele unserer Partnerkunden reduzieren so ihre Steuerlast jedes Jahr um mehrere Tausend Euro – und bauen parallel Vermögen auf.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Ich arbeite erst seit kurzem in der Schweiz – geht das trotzdem?</h3>
-    <p>In vielen Fällen ja. Auch mit kurzer Beschäftigungsdauer kannst du eine Finanzierung bekommen, wenn dein Einkommen und dein Arbeitsvertrag passen. Unsere Partnerbanken prüfen das individuell – du bekommst im Quick-Check sofort Klarheit, ob und wie es geht.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Welche Immobilien eignen sich für Grenzgänger?</h3>
-    <p>Nur geprüfte Kapitalanlage-Immobilien in Deutschland. Das sind Objekte, die sich durch Mieteinnahmen, Lage und steuerliche Vorteile langfristig tragen. Kein Risiko-Neubau in der Großstadt, sondern stabile, nachhaltig rentable Immobilien.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Was kostet mich die Beratung oder Vermittlung?</h3>
-    <p>Die erste Beratung ist kostenlos und unverbindlich. Alles weitere wird besprochen, wenn es für dich passt. MA.DIGITAL tritt als Tippgeber auf – die eigentliche Beratung und Finanzierung erfolgt über geprüfte Partner, die eine Erfolgsprovision an MA.DIGITAL zahlen.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Was passiert, wenn ich später nicht mehr Grenzgänger bin?</h3>
-    <p>Kein Problem. Deine Immobilie bleibt dein Eigentum und läuft weiter wie gewohnt. Bei Veränderungen (z. B. Jobwechsel oder Rückzug nach Deutschland) kann die Finanzierung angepasst werden – so bleibst du flexibel und gut aufgestellt für die Zukunft.</p>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 MA.DIGITAL</p>
-  <p>
-    <a href="datenschutz.html">Datenschutz</a> |
-    <a href="impressum.html">Impressum</a>
-  </p>
-</footer>
+  <footer>
+    <p>&copy; <span id="yr"></span> MA.DIGITAL</p>
+    <p><a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+  </footer>
 
   <script>
-    // Jahr
-    document.getElementById('yr').textContent = new Date().getFullYear();
+    // Jahr automatisch setzen (nur wenn Element existiert)
+    const yr = document.getElementById('yr');
+    if (yr) yr.textContent = new Date().getFullYear();
 
     // Formspree: clientseitiger Submit mit Feedback
     const form = document.getElementById('qcForm');
     const ok = document.getElementById('form-ok');
     const err = document.getElementById('form-err');
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      ok.style.display = 'none';
-      err.style.display = 'none';
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        ok.style.display = 'none';
+        err.style.display = 'none';
 
-      // einfache Pflichtfeld-Prüfung
-      const required = ['name','email','phone','salary','equity','privacy'];
-      for (const id of required) {
-        const el = form.querySelector('[name="'+id+'"]') || document.getElementById(id);
-        if (!el) continue;
-        if ((el.type === 'checkbox' && !el.checked) || (el.value || '').trim() === '') {
-          err.textContent = 'Bitte fülle alle Pflichtfelder korrekt aus.';
-          err.style.display = 'block';
-          el.focus();
-          return;
+        // Pflichtfelder
+        const required = ['name','email','phone','salary','equity','privacy'];
+        for (const id of required) {
+          const el = form.querySelector('[name="'+id+'"]') || document.getElementById(id);
+          if (!el) continue;
+          if ((el.type === 'checkbox' && !el.checked) || (el.value || '').trim() === '') {
+            err.textContent = 'Bitte fülle alle Pflichtfelder korrekt aus.';
+            err.style.display = 'block';
+            el.focus();
+            return;
+          }
         }
-      }
 
-      // Honeypot
-      if ((form.querySelector('#hp')?.value || '').trim() !== '') {
-        // Bot — tue so, als ob es klappte
-        ok.style.display = 'block';
-        form.reset();
-        return;
-      }
-
-      const formData = new FormData(form);
-      try {
-        const rsp = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' }});
-        if (rsp.ok) {
+        // Honeypot
+        if ((form.querySelector('#hp')?.value || '').trim() !== '') {
           ok.style.display = 'block';
           form.reset();
-          // optional: scroll to message
-          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          const data = await rsp.json().catch(()=>({}));
-          err.textContent = (data && data.errors && data.errors[0]?.message) || 'Senden fehlgeschlagen. Bitte später erneut versuchen.';
+          return;
+        }
+
+        const formData = new FormData(form);
+        try {
+          const rsp = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' }});
+          if (rsp.ok) {
+            ok.style.display = 'block';
+            form.reset();
+            ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            const data = await rsp.json().catch(()=>({}));
+            err.textContent = (data && data.errors && data.errors[0]?.message) || 'Senden fehlgeschlagen. Bitte später erneut versuchen.';
+            err.style.display = 'block';
+          }
+        } catch (e2) {
+          err.textContent = 'Netzwerkfehler. Prüfe deine Internetverbindung.';
           err.style.display = 'block';
         }
-      } catch (e2) {
-        err.textContent = 'Netzwerkfehler. Prüfe deine Internetverbindung.';
-        err.style.display = 'block';
-      }
-    });
+      });
+    }
   </script>
 </body>
 </html>
