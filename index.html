@@ -242,17 +242,57 @@
 .faq {
   margin-bottom: 3rem;
 }
+/* Logo im Header */
+.brand {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 5; /* über dem Header-Overlay */
+}
+.logo-header {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,.35));
+  transition: transform .2s ease;
+}
+.logo-header:hover { transform: scale(1.02); }
+
+/* Logo im Footer */
+.logo-footer {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 96px;
+  height: auto;
+  opacity: .95;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,.3));
+}
+
+/* Mobile-Tuning */
+@media (max-width: 480px) {
+  .logo-header { width: 90px; }
+  .logo-footer { width: 84px; }
+}
 
   </style>
 </head>
 <body>
-  <header>
-<div class="hero">
-  <h1>Als Grenzgänger mit der richtigen Immobilienstrategie Steuern senken und zeitgleich Vermögen aufbauen</h1>
-  <p>Du wohnst in Deutschland, arbeitest in der Schweiz und willst endlich statt Miete zu zahlen eigenes Vermögen aufbauen? Erfahre in einer auf dich bezogenen Beratung, wie du noch dieses Jahr deine erste Immobilie finanzieren kannst.</p>
-  <a href="#kontakt" class="btn">Jetzt Chance nutzen</a>
-</div>
+<header>
+  <a href="#top" class="brand" aria-label="MA.DIGITAL – Startseite">
+    <img
+      src="https://madigital-immo.github.io/Immo-Grenzgaenger/madigital-logo.png"
+      alt="MA.DIGITAL Logo"
+      class="logo-header"
+      width="120" height="120"
+      loading="eager" decoding="async">
+  </a>
+
+  <div class="hero">
+    <h1>Als Grenzgänger mit der richtigen Immobilienstrategie Steuern senken und zeitgleich Vermögen aufbauen</h1>
+    <p>Du wohnst in Deutschland, arbeitest in der Schweiz und willst endlich statt Miete zu zahlen eigenes Vermögen aufbauen? Erfahre in einer auf dich bezogenen Beratung, wie du noch dieses Jahr deine erste Immobilie finanzieren kannst.</p>
+    <a href="#kontakt" class="btn">Jetzt Chance nutzen</a>
+  </div>
 </header>
+
 
 
   <section>
@@ -435,11 +475,15 @@
 </section>
 
 <footer>
+  <img
+    src="https://madigital-immo.github.io/Immo-Grenzgaenger/madigital-logo.png"
+    alt="MA.DIGITAL Logo"
+    class="logo-footer"
+    width="96" height="96"
+    loading="lazy">
   <p>&copy; 2025 MA.DIGITAL</p>
-  <p>
-    <a href="datenschutz.html">Datenschutz</a> |
-    <a href="impressum.html">Impressum</a>
-  </p>
+  <p><a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+
 </footer>
 
   <script>
